@@ -1,7 +1,6 @@
 ---
-title             : "Un document exemplu"
-shorttitle        : "Exemplu"
-
+title             : "Analiza relației dintre inteligență și vârstă"
+shorttitle        : "Inteligența și vârsta"
 author: 
   - name          : "Cristian Opariuc-Dan"
     affiliation   : "1,2"
@@ -9,43 +8,55 @@ author:
     address       : "Alea Universiății, Nr. 1"
     email         : "copariuc@gmail.com"
     role: # Contributorship roles (e.g., CRediT, https://credit.niso.org/)
+      - "Equal contribution"
       - "Conceptualization"
       - "Writing - Original Draft Preparation"
       - "Writing - Review & Editing"
+      - "Investigation"
+      - "Methodology"
+      - "Data curation"
+      - "Formal analysis"
   - name          : "Elena Danteș"
     affiliation   : "1"
     role:
+      - "Equal contribution"
       - "Writing - Review & Editing"
       - "Supervision"
-
+      - "Project administration"
+      - "Validation"
+      - "Visualizaton"
+      - "Data curation"
+      - "Methodology"
+  - name          : "Mihaela Sandu"
+    afililiation   : "1"
+    role:
+      - "Funding acquisition"
+      - "Resources"
+      - "Data curation"
 affiliation:
   - id            : "1"
     institution   : "Ovidius University, Constanta, Romania"
   - id            : "2"
     institution   : "Bucharest University, Bucharest, Romania"
-
 authornote: |
-  Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
-
-  Enter author note here.
-
+  Cristian Opariuc-Dan - Faculty of Law and Administrative Sciences, Ovidius University, Constanța, Associated Professor; PhD School, Psychology and Educational Sciences, University of Bucharest, Associated Professor; PhD School, Psychology and Educational Sciences, "Al. I. Cuza" University, Iasi, Associated Professor.
+  
+  Elena Danteș - Faculty of Medicine, Ovidius University, PhD Professor habil.; PhD School of Medicine, Ovidius University, Constanța, PhD Professor habil.
+  
+  Mihaela Sandu - Faculty of Psychology and Educational Sciences, Ovidus University, Constanța, Assistant Professor
+  Many thanks to Ms Georgiana Budai for their work and assistance in all research's stages, includind data collection, data quality aassurance, data screening, purification and proofreading.
+  
 abstract: |
-  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.
-  Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.
-  One sentence clearly stating the **general problem** being addressed by  this particular study.
-  One sentence summarizing the main result (with the words "**here we show**" or their equivalent).
-  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.
-  One or two sentences to put the results into a more **general context**.
-  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
+  [REZUMATUL PE BAZA GHIDULUI]
+  
   
   <!-- https://tinyurl.com/ybremelq -->
-  
-keywords          : "keywords"
-wordcount         : "X"
+keywords          : "intelligence; iq; age"
+wordcount         : "86 words in text body 109 words in reference section"
 bibliography      : ["r-references.bib", "Proiect.bib"]
 floatsintext      : no
 linenumbers       : yes
-draft             : no
+draft             : yes
 mask              : no
 figurelist        : no
 tablelist         : no
@@ -53,7 +64,14 @@ footnotelist      : no
 classoption       : "man"
 documentclass     : "apa7"
 csl               : "`r system.file('rmd', 'apa7.csl', package = 'papaja')`"
-output            : papaja::apa6_pdf
+
+output            :
+  pdf_document    : papaja::apa6_pdf
+  word_document   : papaja::apa6_docx
+  
+header-includes   :
+  - |
+    \usepackage{ragged2e}
 ---
 
 ```{r setup, include = FALSE}
@@ -68,6 +86,7 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
 
 # Methods
+\justify
 We report **how we determined our sample size, all data exclusions** (if any), all *manipulations*, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
 
 Așa cum a rezultat din cercetari [@baughman2012] fenomenul este bine cunoscut. Studiile efectuate de @vangeel2017 ....
