@@ -75,8 +75,8 @@ header-includes   :
 ---
 
 ```{r setup, include = FALSE}
-library("papaja")
-r_refs("r-references.bib")
+  library(papaja); library(foreign); library(rstatix); library(psych)
+  r_refs("r-references.bib")
 ```
 
 ```{r analysis-preferences}
@@ -89,9 +89,14 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 \justify
 We report **how we determined our sample size, all data exclusions** (if any), all *manipulations*, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
 
-Așa cum a rezultat din cercetari [@baughman2012] fenomenul este bine cunoscut. Studiile efectuate de @vangeel2017 ....
-
 ## Participants
+```{r descriptives, include = FALSE}
+  source("02 - Descriptives.R")
+```
+
+The final sample comprised `r desc[1,2]` Romanian participants, aged `r desc$min[1]` to `r desc$max[1]` years (M=`r desc$mean[1]`, SD=`r desc[1,4]`), `r as.numeric(gen.p[2])`% female. The intelligence quotient was ranged between `r desc$min[2]` and `r desc$max[2]` (M=`r desc$mean[2]`, SD=`r desc$sd[2]`)
+
+
 
 ## Material
 

@@ -9,7 +9,7 @@ library(foreign); library(readxl); library(haven); library(writexl)
 # Data import from IBM SPSS Statistics
 ds.SPSS <- read.spss(file = "NIAD - Original.sav", to.data.frame = TRUE, use.value.labels = TRUE)
 
-# Data import from CVS
+# Data import from CSV
 ds.CSV <- read.csv(file = "Baza de date CSV.txt")
 ds.CSV <- read.csv(file = "Baza de date CSV 2.txt", sep = ";")
 ds.CSV <- read.csv2(file = "Baza de date CSV 2.txt")
@@ -30,3 +30,6 @@ write_sav(data = ds.SPSS, path = "NIAD.sav")
 
 # Data export in Microsoft Excel format
 write_xlsx(x = ds.SPSS, path = "NIAD.xlsx")
+
+# Saving data in R format
+save(ds.SPSS, file = "Date.RData")
