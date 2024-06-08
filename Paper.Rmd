@@ -75,7 +75,8 @@ header-includes   :
 ---
 
 ```{r setup, include = FALSE}
-  library(papaja); library(foreign); library(rstatix); library(psych)
+  library(papaja); library(foreign); library(rstatix); library(psych); library(sasLM); library(Hmisc)
+  library(PerformanceAnalytics)
   r_refs("r-references.bib")
 ```
 
@@ -95,8 +96,6 @@ We report **how we determined our sample size, all data exclusions** (if any), a
 ```
 
 The final sample comprised `r desc[1,2]` Romanian participants, aged `r desc$min[1]` to `r desc$max[1]` years (M=`r desc$mean[1]`, SD=`r desc[1,4]`), `r as.numeric(gen.p[2])`% female. The intelligence quotient was ranged between `r desc$min[2]` and `r desc$max[2]` (M=`r desc$mean[2]`, SD=`r desc$sd[2]`)
-
-
 
 ## Material
 
